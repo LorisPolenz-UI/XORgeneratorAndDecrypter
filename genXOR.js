@@ -35,9 +35,9 @@ if (keyL == msgL) {
 
     //if condition is true when arrCalc either is 10 or 01
     if (arrCalc == 10 || arrCalc == 01) {
-      arrRes = arrRes + 0; //after XOR rule value has to be 0
-    } else {
       arrRes = arrRes + 1; //after XOR rule value has to be 1
+    } else {
+      arrRes = arrRes + 0; //after XOR rule value has to be 0
     }
   }
 

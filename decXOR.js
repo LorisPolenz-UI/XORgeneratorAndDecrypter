@@ -15,17 +15,14 @@ How to use:
 
 const bin = require("binary-code"); //import text2binary and binary2text extension
 
-var keyStart =  '0100110001110000111100000111110000001111';             //key => insert same key as in other file when key is in binary insert without '' else do with ''
-var XOR =       '0001111100100101101000000011100101011101';     //XOR code in binary
+var keyStart =  'lerk';      //key => insert same key as in other file when key is in binary insert without '' else do with ''
+var XOR =       '00001110000001000000011100000110';     //XOR code in binary
 
 if (isNaN(keyStart)) {
   var key = bin.binary(keyStart);
-  console.log('NaN' + key)
 } else {
   var key = keyStart;
 }
-
-//var key = bin.binary("lerk"); 
 
 
 
@@ -44,9 +41,9 @@ if (keyL == XORL) {
 
     //if condition is true when arrCalc either is 10 or 01
     if (arrCalc == 10 || arrCalc == 01) {
-      arrRes = arrRes + 0; //after XOR rule value has to be 0
-    } else {
       arrRes = arrRes + 1; //after XOR rule value has to be 1
+    } else {
+      arrRes = arrRes + 0; //after XOR rule value has to be 1
     }
     var XOR2txt = bin.text(arrRes); //convert binary XOR Code to text
   }
