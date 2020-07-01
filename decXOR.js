@@ -10,12 +10,24 @@ How to use:
 4. Outputs :
     DecodedTxt: the value in plain text you entered befor encrypting in other file
     Decoded: the binary value you entered before encypting in other file
+
 */
 
 const bin = require("binary-code"); //import text2binary and binary2text extension
 
-key = bin.binary("lerk"); //key => insert same key as in other file
-var XOR = "11110001111110111111100011111001"; //XOR code in binary
+var keyStart =  '0100110001110000111100000111110000001111';             //key => insert same key as in other file when key is in binary insert without '' else do with ''
+var XOR =       '0001111100100101101000000011100101011101';     //XOR code in binary
+
+if (isNaN(keyStart)) {
+  var key = bin.binary(keyStart);
+  console.log('NaN' + key)
+} else {
+  var key = keyStart;
+}
+
+//var key = bin.binary("lerk"); 
+
+
 
 //get lenght of elements
 var keyL = key.length;
